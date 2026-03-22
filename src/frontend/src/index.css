@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Dark navy theme - always dark */
+    --background: 0.13 0.038 237;
+    --foreground: 0.97 0.01 237;
+    --card: 0.17 0.042 237;
+    --card-foreground: 0.97 0.01 237;
+    --popover: 0.19 0.045 237;
+    --popover-foreground: 0.97 0.01 237;
+    --primary: 0.77 0.12 70;
+    --primary-foreground: 0.13 0.038 237;
+    --secondary: 0.22 0.048 237;
+    --secondary-foreground: 0.97 0.01 237;
+    --muted: 0.22 0.045 237;
+    --muted-foreground: 0.65 0.04 237;
+    --accent: 0.77 0.12 70;
+    --accent-foreground: 0.13 0.038 237;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.26 0.05 237;
+    --input: 0.26 0.05 237;
+    --ring: 0.77 0.12 70;
+    --chart-1: 0.77 0.12 70;
+    --chart-2: 0.6 0.15 237;
+    --chart-3: 0.72 0.19 142;
+    --chart-4: 0.65 0.18 303;
+    --chart-5: 0.68 0.2 22;
+    --sidebar: 0.16 0.042 237;
+    --sidebar-foreground: 0.97 0.01 237;
+    --sidebar-primary: 0.77 0.12 70;
+    --sidebar-primary-foreground: 0.13 0.038 237;
+    --sidebar-accent: 0.22 0.048 237;
+    --sidebar-accent-foreground: 0.97 0.01 237;
+    --sidebar-border: 0.26 0.05 237;
+    --sidebar-ring: 0.77 0.12 70;
+    /* Custom tokens */
+    --gold: 0.77 0.12 70;
+    --gold-muted: 0.65 0.1 70;
+    --navy-deep: 0.1 0.03 237;
+    --navy-mid: 0.16 0.042 237;
+    --navy-card: 0.19 0.048 237;
+    --success: 0.72 0.19 142;
+    --warning: 0.75 0.14 55;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(var(--navy-deep));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(var(--border));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(var(--gold-muted));
+  }
+}
